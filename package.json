@@ -1,0 +1,24 @@
+{
+  "name": "express-simple-pagination",
+  "version": "0.0.1",
+  "description": "Express middleware for simple pagination. Easy way to handle limit and offset",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlisesGascon/express-simple-pagination.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "pagination"
+  ],
+  "author": "Ulises Gascón",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UlisesGascon/express-simple-pagination/issues"
+  },
+  "homepage": "https://github.com/UlisesGascon/express-simple-pagination#readme"
+}
