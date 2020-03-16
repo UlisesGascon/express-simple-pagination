@@ -124,7 +124,7 @@ output:
 
 ```js
 const express = require('express')
-const cors = require('cors')
+const pagination = require('express-simple-pagination')
 const app = express()
 
 const paginationOptions = {
