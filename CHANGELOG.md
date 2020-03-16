@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added node,linux,macos,windows. [See](https://www.gitignore.io/?templates=node,linux,macos,windows)
 - Added CoC
 - Added contributing guide
+- Added changelog
 
 ## [0.0.1] - 2020-03-16
 
