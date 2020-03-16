@@ -10,17 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added devDependencies and npm scripts
-  - Added devDependencies (Husky, Jest and Standard)
-  - Added npm scripts (test and lint)
-  - Added Git Hooks (pre-commt, pre-push and post-merge)
+  - Added devDependencies (`husky`, `jest` and `standard`)
+  - Added npm scripts (`test` and `lint`)
+  - Added Git Hooks (`pre-commt`, `pre-push` and `post-merge`)
 - Added CI
   - Added travis config
   - Added auto-publish on NPM
 - Updated gitignore with new rules
-  - Added node,linux,macos,windows. [See](https://www.gitignore.io/?templates=node,linux,macos,windows)
+  - Added node, linux, macos, windows. [See](https://www.gitignore.io/?templates=node,linux,macos,windows)
 - Added CoC
 - Added contributing guide
 - Added changelog
+- Added tests
+- Added dependency `debug`
 
 ## [0.0.1] - 2020-03-16
 

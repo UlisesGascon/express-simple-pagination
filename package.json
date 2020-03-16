@@ -42,5 +42,8 @@
       "pre-push": "npm run test:coverage",
       "post-merge": "npm install"
     }
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
   }
 }
