@@ -22,8 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation typo
 - Travis file name
 
-
-
 ## [1.0.0] - 2020-03-16
 
 ### Added
@@ -56,7 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - License MIT
 - Basic Package.json
 
-[Unreleased]: https://github.com/ulisesgascon/express-simple-pagination/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/ulisesgascon/express-simple-pagination/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/ulisesgascon/express-simple-pagination/releases/tag/v1.0.2
 [1.0.1]: https://github.com/ulisesgascon/express-simple-pagination/releases/tag/v1.0.1
 [1.0.0]: https://github.com/ulisesgascon/express-simple-pagination/releases/tag/v1.0.0
 [0.0.1]: https://github.com/ulisesgascon/express-simple-pagination/releases/tag/v0.0.1
