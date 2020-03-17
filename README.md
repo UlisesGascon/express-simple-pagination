@@ -61,6 +61,7 @@ npm install express-simple-pagination
 const express = require('express')
 const pagination = require('express-simple-pagination')
 const app = express()
+const port = 3000
 
 app.use(pagination())
 
@@ -68,8 +69,8 @@ app.get('/products', (req, res, next) => {
   res.json({msg: req.pagination})
 })
 
-app.listen(3000, () => {
-  console.log('web server listening on port 80')
+app.listen(port, () => {
+  console.log(`web server listening on ${port}`)
 })
 ```
 
@@ -96,6 +97,7 @@ output:
 const express = require('express')
 const pagination = require('express-simple-pagination')
 const app = express()
+const port = 3000
   
 app.get('/products', pagination(), (req, res, next) => {
   res.json({msg: req.pagination})
@@ -105,8 +107,8 @@ app.get('/clients', (req, res, next) => {
   res.json({msg: req.pagination})
 })
 
-app.listen(3000, () => {
-  console.log('web server listening on port 80')
+app.listen(port, () => {
+  console.log(`web server listening on ${port}`)
 })
 ```
 
@@ -126,18 +128,19 @@ output:
 const express = require('express')
 const pagination = require('express-simple-pagination')
 const app = express()
+const port = 3000
 
 const paginationOptions = {
   min: 5,
   max: 1000
 }
 
-app.get('/products', pagination(), (req, res, next) => {
+app.get('/products', pagination(paginationOptions), (req, res, next) => {
   res.json({msg: req.pagination})
 })
 
-app.listen(3000, () => {
-  console.log('web server listening on port 80')
+app.listen(port, () => {
+  console.log(`web server listening on ${port}`)
 })
 ```
 
