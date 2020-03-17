@@ -68,8 +68,8 @@ app.get('/products', (req, res, next) => {
   res.json({msg: req.pagination})
 })
 
-app.listen(3000, () => {
-  console.log('web server listening on port 80')
+const server = app.listen(3000, () => {
+  console.log('web server listening on port', server.address().port)
 })
 ```
 
@@ -105,8 +105,8 @@ app.get('/clients', (req, res, next) => {
   res.json({msg: req.pagination})
 })
 
-app.listen(3000, () => {
-  console.log('web server listening on port 80')
+const server = app.listen(3000, () => {
+  console.log('web server listening on port', server.address().port)
 })
 ```
 
@@ -132,12 +132,12 @@ const paginationOptions = {
   max: 1000
 }
 
-app.get('/products', pagination(), (req, res, next) => {
+app.get('/products', pagination(paginationOptions), (req, res, next) => {
   res.json({msg: req.pagination})
 })
 
-app.listen(3000, () => {
-  console.log('web server listening on port 80')
+const server = app.listen(3000, () => {
+  console.log('web server listening on port', server.address().port)
 })
 ```
 
