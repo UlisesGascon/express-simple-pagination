@@ -11,25 +11,27 @@ const parseValueInRange = (num, min, max) => {
   return num
 }
 
-module.exports = (configProvided = {}) => (req, res, next) => {
+module.exports = (configProvided = {}) => {
   const config = { min: 20, max: 500, ...configProvided }
-  req.pagination = {
-    isEnable: false,
-    default: { limit: config.min, offset: 0 }
-  }
+  return (req, res, next) => {
+    req.pagination = {
+      isEnable: false,
+      default: { limit: config.min, offset: 0 }
+    }
 
-  let { offset, limit } = req.query
+    let { offset, limit } = req.query
 
-  if (!offset && !limit) {
-    debug('No pagination required')
+    if (!offset && !limit) {
+      debug('No pagination required')
+      return next()
+    }
+
+    offset = parseToPositiveInt(offset)
+    limit = parseToPositiveInt(limit)
+
+    req.pagination.isEnable = true
+    req.pagination.current = { limit: parseValueInRange(limit, config.min, config.max), offset }
+    debug(`Pagination defined: ${req.pagination}`)
     return next()
   }
-
-  offset = parseToPositiveInt(offset)
-  limit = parseToPositiveInt(limit)
-
-  req.pagination.isEnable = true
-  req.pagination.current = { limit: parseValueInRange(limit, config.min, config.max), offset }
-  debug(`Pagination defined: ${req.pagination}`)
-  return next()
 }
