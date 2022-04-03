@@ -94,4 +94,40 @@ describe('Pagination middleware', () => {
     expect(request.pagination.current).toStrictEqual({ limit: 456, offset: 0 })
     expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
   })
+
+  test('page behaviour', () => {
+    // Negative value
+    request.query.page = '-10'
+    pagination()(request, response, next)
+    expect(request.pagination.isEnable).toBe(true)
+    expect(request.pagination.current).toStrictEqual({ limit: 20, offset: 0 })
+    expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
+
+    // Valid transformations
+    request.query.page = '0'
+    pagination()(request, response, next)
+    expect(request.pagination.isEnable).toBe(true)
+    expect(request.pagination.current).toStrictEqual({ limit: 20, offset: 0 })
+    expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
+
+    request.query.page = '1'
+    pagination()(request, response, next)
+    expect(request.pagination.isEnable).toBe(true)
+    expect(request.pagination.current).toStrictEqual({ limit: 20, offset: 20 })
+    expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
+
+    request.query.page = '25'
+    pagination()(request, response, next)
+    expect(request.pagination.isEnable).toBe(true)
+    expect(request.pagination.current).toStrictEqual({ limit: 20, offset: 500 })
+    expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
+
+    // If both page and offset are set, page is ignored
+    request.query.page = '1'
+    request.query.offset = '10'
+    pagination()(request, response, next)
+    expect(request.pagination.isEnable).toBe(true)
+    expect(request.pagination.current).toStrictEqual({ limit: 20, offset: 10 })
+    expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
+  })
 })
