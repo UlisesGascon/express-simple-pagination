@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/UlisesGascon/express-simple-pagination#readme",
   "devDependencies": {
-    "husky": "^4.2.3",
-    "jest": "^25.1.0",
-    "standard": "^14.3.3"
+    "husky": "4.2.3",
+    "jest": "25.1.0",
+    "standard": "14.3.3"
   },
   "standard": {
     "env": [
@@ -44,6 +44,6 @@
     }
   },
   "dependencies": {
-    "debug": "^4.1.1"
+    "debug": "4.1.1"
   }
 }
