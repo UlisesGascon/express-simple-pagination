@@ -157,6 +157,11 @@ output:
 └──> msg: {req.isEnable: false, current: { limit: 4000, offset: 0 }, default: { limit: 5, offset: 0 }}
 ```
 
+
+## Page vs Offset
+
+It is possible to use `page` argument like `?page=1` in state of `offset` 
+
 # Test
 
 You can run them:
