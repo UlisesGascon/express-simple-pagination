@@ -49,7 +49,7 @@ describe('Pagination middleware', () => {
     expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
   })
 
-  test('offset behaviour', () => {
+  test('Offset behaviour', () => {
     // Avoid negative values
     request.query.offset = '-10'
     pagination()(request, response, next)
@@ -65,7 +65,7 @@ describe('Pagination middleware', () => {
     expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
   })
 
-  test('limit behaviour', () => {
+  test('Limit behaviour', () => {
     // Negative value
     request.query.limit = '-10'
     pagination()(request, response, next)
@@ -95,7 +95,7 @@ describe('Pagination middleware', () => {
     expect(request.pagination.default).toStrictEqual({ limit: 20, offset: 0 })
   })
 
-  test('page behaviour', () => {
+  test('Page behaviour', () => {
     // Negative value
     request.query.page = '-10'
     pagination()(request, response, next)
