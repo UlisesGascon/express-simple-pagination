@@ -9,7 +9,8 @@
     "test:coverage": "jest --verbose  --coverage",
     "test:watch": "jest --verbose  --watchAll",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -29,19 +30,14 @@
   "devDependencies": {
     "husky": "7.0.4",
     "jest": "27.5.1",
-    "standard": "16.0.4"
+    "standard": "16.0.4",
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1"
   },
   "standard": {
     "env": [
       "jest"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test:coverage",
-      "post-merge": "npm install"
-    }
   },
   "dependencies": {
     "debug": "4.3.4"
