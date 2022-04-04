@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org'
       - name: Run npm install ci
-        run: npm ci --only=production
+        run: npm ci
       - name: Publish package
         run: npm publish --ignore-scripts --access public
         env:
