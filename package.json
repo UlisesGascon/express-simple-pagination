@@ -1,6 +1,6 @@
 {
   "name": "express-simple-pagination",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "description": "Express middleware for simple pagination. Easy way to handle limit and offset",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,12 @@
     "test:coverage": "jest --verbose  --coverage",
     "test:watch": "jest --verbose  --watchAll",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "prepare": "husky install",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "repository": {
     "type": "git",
@@ -27,21 +32,17 @@
   },
   "homepage": "https://github.com/UlisesGascon/express-simple-pagination#readme",
   "devDependencies": {
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1",
     "husky": "7.0.4",
     "jest": "27.5.1",
-    "standard": "16.0.4"
+    "standard": "16.0.4",
+    "standard-version": "9.3.2"
   },
   "standard": {
     "env": [
       "jest"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test:coverage",
-      "post-merge": "npm install"
-    }
   },
   "dependencies": {
     "debug": "4.3.4"

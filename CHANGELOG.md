@@ -1,9 +1,20 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### [1.2.1](https://github.com/ulisesGascon/express-simple-pagination/compare/v1.2.0...v1.2.1) (2022-04-04)
+
+## [1.2.0](https://github.com/ulisesGascon/express-simple-pagination/compare/v1.1.0...v1.2.0) (2022-04-04)
+
+
+### Features
+
+* added support to  Conventional Commits ([2a647e0](https://github.com/ulisesGascon/express-simple-pagination/commits/2a647e01342f7623657c43db37aeb6e11df2a91d))
+
+
+### Bug Fixes
+
+* added execution permissions for husky hooks ([4879f8f](https://github.com/ulisesGascon/express-simple-pagination/commits/4879f8f422c584601a421e1f04300afde76e969d))
 
 ## [1.1.0] - 2022-04-03
 
