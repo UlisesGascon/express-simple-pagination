@@ -1,6 +1,6 @@
 {
   "name": "express-simple-pagination",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Express middleware for simple pagination. Easy way to handle limit and offset",
   "main": "index.js",
   "scripts": {
